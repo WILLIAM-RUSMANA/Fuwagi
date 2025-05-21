@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Home() {
@@ -6,6 +7,7 @@ export default function Home() {
   const intervalRef = useRef(null);
   const touchStartX = useRef(0);
   const touchEndX = useRef(0);
+  const navigate = useNavigate();
 
   const carouselItems = [
     {
@@ -106,7 +108,7 @@ export default function Home() {
               borderRadius: "50%",
               background: idx === currentIndex ? "#062261" : "#ccc",
               margin: "0 0.5rem",
-              cursor: "pointer"
+              cursor: "hand"
             }}
           ></div>
         ))}
@@ -127,7 +129,7 @@ export default function Home() {
       {/* <!-- Enhanced Button --> */}
       <button
         className="enhanced-button"
-        onClick={() => window.location.href = "/quiz"}
+        onClick={() => navigate("/quiz")}
         style={{
           backgroundColor: "#062261",
           color: "#F4E7DF",
@@ -136,7 +138,7 @@ export default function Home() {
           borderRadius: "9999px",
           fontFamily: "'Playfair Display', serif",
           letterSpacing: "0.05em",
-          transition: "all 0.3s ease"
+          transition: "all 0.3s ease",
         }}
       >
         Take Quiz

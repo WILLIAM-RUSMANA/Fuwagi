@@ -5,14 +5,12 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 
 function App() {
-  // const router = createBrowserRouter([
-  //   { path: "/", element: <Home /> },
-  //   { path: "/quiz", element: <QuizApp /> },
-  // ]);
+  const router = createBrowserRouter([
+    { path: "/", element: <Home /> },
+    { path: "/quiz", element: <QuizApp /> },
+  ]);
 
-  // return <RouterProvider router={router} />;
-  // return ( <Home />)
-  return ( <QuizApp />);
+  return <RouterProvider router={router} />;
 }
 
 export default App;
