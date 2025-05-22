@@ -1,6 +1,5 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
 
 body {
   margin: 0;
@@ -19,9 +18,8 @@ h1, h2, .btn-text {
 }
 
 .enhanced-button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 30px rgba(41, 75, 155, 0.7);
-  background-color: #254899;
+  transform: scale(1.15);
+  box-shadow: 0 0 30px #062261;
   cursor: pointer;
 }
 

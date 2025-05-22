@@ -23,7 +23,7 @@ const options = [
 ];
 
 function ProgressBar({ current, total }) {
-  const progress = ((current + 1) / total) * 100;
+  const progress = ((current ) / total) * 100;
 
   return (
     <div
@@ -78,7 +78,7 @@ export default function QuizApp() {
   const scores = submitted ? calculateScores() : [];
 
   return (
-    <div className="min-h-screen p-6 flex flex-col items-center" style={{ backgroundColor: "#F4E7DF", color: "#062261" }}>
+    <div className="flex justify-center min-h-screen p-6 flex flex-col items-center" style={{ backgroundColor: "#F4E7DF", color: "#062261" }}>
       {!submitted ? (
         <div className="w-full max-w-xl">
           <ProgressBar current={current} total={questions.length} />
@@ -89,8 +89,8 @@ export default function QuizApp() {
                 <button
                   key={oIdx}
                   onClick={() => handleOptionSelect(opt.value)}
-                  className="py-4 px-4 rounded text-white text-base font-medium"
-                  style={{ backgroundColor: "#062261" }}
+                  className="flex w-full text-9xl py-4 px-4 rounded text-white text-base font-medium"
+                  style={{ backgroundColor: "#D4E7DF" }}
                 >
                   {opt.label}
                 </button>
@@ -113,7 +113,7 @@ export default function QuizApp() {
               setCurrent(0);
             }}
             className="mt-6 px-6 py-2 rounded text-white"
-            style={{ backgroundColor: "#062261" }}
+            style={{ backgroundColor: "red" }}
           >
             Retake Quiz
           </button>
